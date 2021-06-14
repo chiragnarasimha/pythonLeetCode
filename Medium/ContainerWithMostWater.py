@@ -26,11 +26,19 @@ def maxArea(height: [int]) -> int:
     lPointer = 0
     rPointer = len(height) - 1
     while lPointer < rPointer:
-        area = (rPointer - lPointer) * min(height[lPointer], height[rPointer])
-        max_area = max(area, max_area)
         if height[lPointer] <= height[rPointer]:
+            max_area = max(
+                max_area,
+                # This is the formula to calculate the area
+                (rPointer - lPointer) * height[lPointer]
+            )
             lPointer += 1
         else:
+            max_area = max(
+                max_area,
+                # This is the formula to calculate the area
+                (rPointer - lPointer) * height[rPointer]
+            )
             rPointer -= 1
     return max_area
 
