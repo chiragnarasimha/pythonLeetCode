@@ -66,6 +66,7 @@ def isValid(s: str) -> bool:
     # Check to make sure that there are even number of parentheses
     if len(s) % 2 != 0:
         return False
+    
     stack = []
     closeToOpen = {
         ")": "(",
