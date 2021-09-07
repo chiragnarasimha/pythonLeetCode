@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class N20ValidParentheses:
     @staticmethod
     def is_valid(s: str) -> bool:
@@ -26,10 +29,24 @@ class N20ValidParentheses:
 
         return True if len(stack) == 0 else False
 
-
-assert N20ValidParentheses.is_valid("]").__eq__(False)
-assert N20ValidParentheses.is_valid("(])").__eq__(False)
-assert N20ValidParentheses.is_valid("()").__eq__(True)
-assert N20ValidParentheses.is_valid("))").__eq__(False)
-assert N20ValidParentheses.is_valid("(]").__eq__(False)
-assert N20ValidParentheses.is_valid("()[]{}").__eq__(True)
+    @staticmethod
+    # This was copied and pasted from leetcode
+    def is_valid2(s: str) -> bool:
+        if len(s) % 2 != 0:
+            return False
+        p = dict()
+        p['('] = ')'
+        p['{'] = '}'
+        p['['] = ']'
+        q = deque()
+        for c in s:
+            if c in p:
+                q.append(c)
+            elif q:
+                if p[q.pop()] != c:
+                    return False
+            else:
+                return False
+        if q:
+            return False
+        return True
