@@ -1,6 +1,6 @@
 import time
 
-from ChiragHelperFunctions import printExecutionTime
+from ChiragHelperFunctions import print_execution_time
 
 
 def multiplyBruteForce(num1: str, num2: str) -> str:
@@ -36,7 +36,7 @@ def multiplyBruteForce(num1: str, num2: str) -> str:
 startTime = time.time_ns()
 multiplyBruteForce("16", "16")
 multiplyBruteForce("123", "456")
-printExecutionTime(startTime)
+print_execution_time(startTime)
 
 
 def multiply(num1: str, num2: str) -> str:
@@ -57,4 +57,4 @@ def multiply(num1: str, num2: str) -> str:
 startTime = time.time_ns()
 multiply("16", "16")
 multiply("123", "456")
-printExecutionTime(startTime)
+print_execution_time(startTime)

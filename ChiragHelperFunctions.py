@@ -1,7 +1,7 @@
 import time
 
 
-def printExecutionTime(start_time: int):
+def print_execution_time(start_time: int):
     '''
     Will print the time it took to run the code
 
@@ -11,3 +11,9 @@ def printExecutionTime(start_time: int):
     print("It took {} ms time taken to run the code was"
           .format((time.time_ns() - start_time) * 1e-6))
     print()
+
+
+class ListNode:
+    def __init__(self, val=0, next_node=None):
+        self.val = val
+        self.next_node = next

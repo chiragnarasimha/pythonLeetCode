@@ -1,7 +1,7 @@
 import time
 from typing import List
 
-from ChiragHelperFunctions import printExecutionTime
+from ChiragHelperFunctions import print_execution_time
 
 
 def threeSumBruteForce(nums: List[int]) -> List[List[int]]:
@@ -24,7 +24,7 @@ def threeSumBruteForce(nums: List[int]) -> List[List[int]]:
 
 startTime = time.time_ns()
 threeSumBruteForce([-1, 0, 1, 2, -1, -4])
-printExecutionTime(startTime)
+print_execution_time(startTime)
 
 
 # This is the optimal solution

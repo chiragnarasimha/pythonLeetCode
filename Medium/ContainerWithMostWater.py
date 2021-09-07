@@ -1,6 +1,6 @@
 import time
 
-from ChiragHelperFunctions import printExecutionTime
+from ChiragHelperFunctions import print_execution_time
 
 
 def maxAreaBruteForce(height) -> int:
@@ -18,7 +18,7 @@ def maxAreaBruteForce(height) -> int:
 
 startTime = time.time_ns()
 result = maxAreaBruteForce([1, 8, 6, 2, 5, 4, 8, 3, 7])
-printExecutionTime(startTime)
+print_execution_time(startTime)
 
 
 def maxArea(height: [int]) -> int:
@@ -45,4 +45,4 @@ def maxArea(height: [int]) -> int:
 
 startTime = time.time_ns()
 result = maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])
-printExecutionTime(startTime)
+print_execution_time(startTime)

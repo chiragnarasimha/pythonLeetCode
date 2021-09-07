@@ -1,6 +1,6 @@
 import time
 
-from ChiragHelperFunctions import printExecutionTime
+from ChiragHelperFunctions import print_execution_time
 
 
 def intToRomanBruteForce(num: int) -> str:
@@ -54,7 +54,7 @@ test = intToRomanBruteForce(1994)
 test = intToRomanBruteForce(2000)
 test = intToRomanBruteForce(3999)
 test = intToRomanBruteForce(104)
-printExecutionTime(startTime)
+print_execution_time(startTime)
 
 
 def intToRoman(num: int) -> str:
@@ -73,7 +73,7 @@ test = intToRoman(1994)
 test = intToRoman(2000)
 test = intToRoman(3999)
 test = intToRoman(104)
-printExecutionTime(startTime)
+print_execution_time(startTime)
 
 
 def intToRoman(num: int) -> str:
@@ -94,4 +94,4 @@ test = intToRoman(1994)
 test = intToRoman(2000)
 test = intToRoman(3999)
 test = intToRoman(133)
-printExecutionTime(startTime)
+print_execution_time(startTime)
