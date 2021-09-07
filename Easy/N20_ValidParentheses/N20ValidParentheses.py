@@ -1,5 +1,6 @@
 class N20ValidParentheses:
-    def is_valid(self, s: str) -> bool:
+    @staticmethod
+    def is_valid(s: str) -> bool:
         # This Dictionary contains all the matching pairs. This is also
         # scalable in the future if we need to add any further rules
         brackets_dict = {
@@ -26,10 +27,9 @@ class N20ValidParentheses:
         return True if len(stack) == 0 else False
 
 
-sol = N20ValidParentheses()
-assert sol.is_valid("]").__eq__(False)
-assert sol.is_valid("(])").__eq__(False)
-assert sol.is_valid("()").__eq__(True)
-assert sol.is_valid("))").__eq__(False)
-assert sol.is_valid("(]").__eq__(False)
-assert sol.is_valid("()[]{}").__eq__(True)
+assert N20ValidParentheses.is_valid("]").__eq__(False)
+assert N20ValidParentheses.is_valid("(])").__eq__(False)
+assert N20ValidParentheses.is_valid("()").__eq__(True)
+assert N20ValidParentheses.is_valid("))").__eq__(False)
+assert N20ValidParentheses.is_valid("(]").__eq__(False)
+assert N20ValidParentheses.is_valid("()[]{}").__eq__(True)
