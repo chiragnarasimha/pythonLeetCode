@@ -24,7 +24,7 @@ class N26:
                 l_ptr += 1
                 if r_ptr > len(nums):
                     break
-        return nums[0:l_ptr]
+        return l_ptr
 
 
 print(N26.removeDuplicates([1, 1, 2]))
