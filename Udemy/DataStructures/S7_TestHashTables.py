@@ -2,18 +2,16 @@ import unittest
 
 from Udemy.DataStructures.S7_HashTables import HashTablesChirag
 
-hash_table = HashTablesChirag(50)
-
 
 class S7TestHashTables(unittest.TestCase):
-    def testHashFunctions(self):
+    def test_hash_functions(self):
         hash_table = HashTablesChirag(50)
         assert hash_table.get_key_hash("grapes") == 23
         assert hash_table.get_key_hash("grapess") == 13
         assert hash_table.get_key_hash("grapes3131s") == 21
         assert hash_table.get_key_hash("1232") == 2
 
-    def testSetAndGetFunctions(self):
+    def test_set_and_get_functions(self):
         hash_table = HashTablesChirag(50)
 
         hash_table.set("g", 100)
@@ -36,3 +34,7 @@ class S7TestHashTables(unittest.TestCase):
 
         print("")
         print(hash_table)
+
+
+if __name__ == '__main__':
+    unittest.main()
