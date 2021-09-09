@@ -1,15 +1,19 @@
 import time
 
 
-def print_execution_time(start_time: int):
-    '''
+def print_execution_time(start_time: int, message=""):
+    """
     Will print the time it took to run the code
 
-    :param start_time: start_time = time.time_ns()
+    :param message: Custom message if any
+    :param start_time: start_time = time.process_time_ns()
     :return: None
-    '''
-    print("It took {} ms time taken to run the code was"
-          .format((time.time_ns() - start_time) * 1e-6))
+    """
+    print("It took {time_taken} ms to run the code. {custom_message}"
+          .format(time_taken
+                  =(time.process_time_ns() - start_time) * 1e-6,
+                  custom_message=message)
+          )
     print()
 
 
