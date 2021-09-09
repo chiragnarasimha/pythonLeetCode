@@ -43,6 +43,24 @@ class L84TestFirstRecurringCharacter(unittest.TestCase):
                              test_class.using_hash_tables([2, 3, 4, 5])
                              )
 
+    def test_using_for_loops(self):
+        test_class = L84FirstRecurringCharacter()
+
+        for _ in range(stress):
+            self.assertEqual(2,
+                             test_class.using_for_loops(
+                                 [2, 5, 1, 2, 3, 5, 1, 2, 4]),
+                             )
+
+            self.assertEqual(1,
+                             test_class.using_for_loops(
+                                 [2, 1, 1, 2, 3, 5, 1, 2, 4]),
+                             )
+
+            self.assertEqual(None,
+                             test_class.using_for_loops([2, 3, 4, 5])
+                             )
+
 
 if __name__ == '__main__':
     unittest.main()
