@@ -28,7 +28,8 @@ class L84FirstRecurringCharacter:
                 return n
         return None
 
-    def using_hash_tables(self, nums: [int]):
+    @staticmethod
+    def using_hash_tables(nums: [int]):
         history_map = {}
         for i, n in enumerate(nums):
             if n not in history_map:
