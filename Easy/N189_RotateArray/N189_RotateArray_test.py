@@ -11,7 +11,6 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual([-1, -100, 3, 99],
                          N189.rotate([3, 99, -1, -100],
                                      2))
-
         self.assertEqual([3, 99, -1, -100],
                          N189.rotate([-1, -100, 3, 99],
                                      2))
