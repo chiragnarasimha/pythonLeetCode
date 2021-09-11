@@ -40,6 +40,27 @@ class L84FirstRecurringCharacter:
 
     @staticmethod
     def using_for_loops(nums: [int]):
+        """
+        To fix this, we need to calculate the distance between each as we
+        loop through
+        function firstRecurringCharacter2(array) {
+
+            let lastPair = undefined;
+            let lastDistance = undefined;
+            for(let i = 0; i < array.length; i++) {
+                for(let j = i+1; j < array.length; j++) {
+                    if(array[i] === array[j] && (lastDistance>j-i || lastDistance==undefined)) {
+                        lastPair=array[i];
+                        lastDistance= j-i;
+                        break;
+                    }
+                }
+            }
+            return lastPair;
+        }
+        :param nums:
+        :return:
+        """
         for i in range(len(nums)):
             for j in range(i + 1, len(nums)):
                 if nums[i] == nums[j]:
