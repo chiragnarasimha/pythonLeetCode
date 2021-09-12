@@ -22,6 +22,9 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def __str__(self):
+        return str(self.val)
+
 
 def list_node_to_array(list_node: ListNode):
     """
@@ -37,3 +40,11 @@ def list_node_to_array(list_node: ListNode):
         current_node = current_node.next
 
     return return_list
+
+
+class CustomException(Exception):
+    def __init__(self, message):
+        self.message = message
+
+    def __str__(self):
+        return self.message

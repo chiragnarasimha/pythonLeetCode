@@ -28,8 +28,6 @@ _
 /Easy/N26RemoveDuplicatesfromSortedArray /N26.py,d/7/d71699c83e863877c2463fa37e092c8d858e997e
 b
 2Udemy/DataStructures/S7HashTables/L79HashTables.py,b/5/b57983d86127e3e96222e33743881186837fd6e3
-H
-ChiragHelperFunctions.py,b/f/bfc9f9486ac965e8a9eae2a3a18879be1e4ee5e2
 f
 6Easy/N20_ValidParentheses/Test_N20_ValidParentheses.py,5/d/5d566d9bd3f6c412f0dc77f433b3a1600e49d8a7
 f
