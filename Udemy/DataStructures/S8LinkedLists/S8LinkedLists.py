@@ -16,12 +16,14 @@ class LinkedList:
 
     def __str__(self):
         message = """The Contents of your linked list are
-        Head: {}
-        Tail: {}
+        Head: {} -> {}
+        Tail: {} -> {}
         List: {}
         Length: {}
         """
-        return message.format(self.head, self.tail, self.to_str(),
+        return message.format(self.head, self.head.next, self.tail,
+                              self.tail.next,
+                              self.__to_str(),
                               len(self))
 
     def get_node(self, index) -> ListNode:
@@ -36,21 +38,30 @@ class LinkedList:
             curr_node = curr_node.next
         return curr_node
 
-    def to_str(self):
+    def __to_str(self):
         curr_node = self.head
         res = "[ "
         while curr_node is not None:
-            res += ("{} ".format(curr_node.val))
+            res += ("\n\t\t\t\t{} -> {} ".format(curr_node.val, curr_node.next))
             curr_node = curr_node.next
-        return res + "]"
+        return res + "\n\t\t\t  ]"
+
+    def to_arr(self):
+        curr_node = self.head
+        res = []
+        while curr_node is not None:
+            res.append(curr_node.val)
+            curr_node = curr_node.next
+        return res
 
     def append(self, val):
         """
         This method will append the value to the tail of the linked list
         :param val: Value to insert at the end of the list
         """
-        self.tail.next = ListNode(val)
-        self.tail = self.tail.next
+        new_node = ListNode(val, None)
+        self.tail.next = new_node
+        self.tail = new_node
         self.length += 1
         # print(self.__list_to_str())
 
@@ -84,3 +95,26 @@ class LinkedList:
         # Check if we need to update the tail
         if current_node.next is None:
             self.tail = current_node
+
+    def reverse(self):
+        # The very first thing to do is to check if the head node even has a
+        # next
+        if self.head.next is None:
+            return self
+
+        # We need these nodes to go through the list
+        # [ 1 2 3 4 5 6 7 8 ]
+        prev_node = None
+        current_node = self.head
+        next_node = current_node.next
+
+        # Swap the head and tail before modifying the list
+        self.head, self.tail = self.tail, self.head
+        while next_node is not None:
+            # Store the next node in the list first
+            next_node = current_node.next
+            # The current node should be pointing to the previous node
+            current_node.next = prev_node
+            prev_node = current_node
+            # Traverse through the list
+            current_node = next_node

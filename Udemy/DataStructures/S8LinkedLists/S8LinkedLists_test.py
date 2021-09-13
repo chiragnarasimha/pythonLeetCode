@@ -37,18 +37,18 @@ class MyTestCase(unittest.TestCase):
         list1.append("b")
         list1.append("d")
         list1.insert("c", 2)
-        self.assertEqual("[ a b c d ]", list1.to_str())
+        self.assertEqual(["a", "b", "c", "d"], list1.to_arr())
         self.assertEqual("d", list1.tail.val)
 
-        list2 = LinkedList("2")
-        list2.append("3")
-        list2.append("4")
-        list2.append("5")
-        list2.prepend("1")
-        list2.prepend("0")
-        self.assertEqual("[ 0 1 2 3 4 5 ]", list2.to_str())
+        list2 = LinkedList(2)
+        list2.append(3)
+        list2.append(4)
+        list2.append(5)
+        list2.prepend(1)
+        list2.prepend(0)
+        self.assertEqual([0, 1, 2, 3, 4, 5], list2.to_arr())
         list2.insert("a", 2)
-        self.assertEqual("[ 0 1 a 2 3 4 5 ]", list2.to_str())
+        self.assertEqual([0, 1, "a", 2, 3, 4, 5], list2.to_arr())
         self.assertEqual(7, list2.length)
 
     def test_insert_exception_handling(self):
@@ -58,7 +58,7 @@ class MyTestCase(unittest.TestCase):
         list1.insert("c", 2)
         list1.append("f")
         list1.insert("e", 4)
-        self.assertEqual("[ a b c d e f ]", list1.to_str())
+        self.assertEqual(["a", "b", "c", "d", "e", "f"], list1.to_arr())
 
         with self.assertRaises(SyntaxError):
             list1.insert(0, 0)
@@ -67,10 +67,25 @@ class MyTestCase(unittest.TestCase):
         list1 = LinkedList("b")
         list1.append("c")
         list1.append("d")
-        self.assertEqual("[ b c d ]", list1.to_str())
+        self.assertEqual(["b", "c", "d"], list1.to_arr())
         list1.prepend("a")
         self.assertEqual("a", list1.head.val)
-        self.assertEqual("[ a b c d ]", list1.to_str())
+        self.assertEqual(["a", "b", "c", "d"], list1.to_arr())
+
+    def test_reverse_single_node_in_list(self):
+        list1 = LinkedList(10)
+        list1.reverse()
+
+        self.assertEquals([10], list1.to_arr())
+
+    def test_reverse_multiple_nodes_in_list(self):
+        list1 = LinkedList(10)
+        list1.append(20)
+        list1.append(30)
+        list1.append(40)
+        # S8L106.reverse_linked_list(list1)
+        list1.reverse()
+        self.assertEquals([40, 30, 20, 10], list1.to_arr())
 
 
 if __name__ == '__main__':
