@@ -3,7 +3,7 @@ import unittest
 from ChiragHelperFunctions import ListNode, list_node_to_array
 from Easy.N21MergeTwoSortedLists.N21MergeTwoSortedLists import N21
 
-stress = 1000000
+stress = 1
 
 
 class TestN21(unittest.TestCase):

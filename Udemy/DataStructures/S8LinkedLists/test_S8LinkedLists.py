@@ -76,7 +76,7 @@ class MyTestCase(unittest.TestCase):
         list1 = LinkedList(10)
         list1.reverse()
 
-        self.assertEquals([10], list1.to_arr())
+        self.assertEqual([10], list1.to_arr())
 
     def test_reverse_multiple_nodes_in_list(self):
         list1 = LinkedList(10)
@@ -85,7 +85,7 @@ class MyTestCase(unittest.TestCase):
         list1.append(40)
         # S8L106.reverse_linked_list(list1)
         list1.reverse()
-        self.assertEquals([40, 30, 20, 10], list1.to_arr())
+        self.assertEqual([40, 30, 20, 10], list1.to_arr())
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@ import unittest
 
 from Easy.N20_ValidParentheses.N20ValidParentheses import N20ValidParentheses
 
-stress = 1000000
+stress = 1
 
 
 class TestSolution(unittest.TestCase):
