@@ -23,8 +23,6 @@ f
 6Easy/N20_ValidParentheses/Test_N20_ValidParentheses.py,5/d/5d566d9bd3f6c412f0dc77f433b3a1600e49d8a7
 f
 6Udemy/DataStructures/S7HashTables/L79TestHashTables.py,4/0/4024c5dedbbb3f59aa3d609fc9e1e7e5e7e7a62b
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 o
 ?Udemy/DataStructures/S7HashTables/L84FirstRecurringCharacter.py,1/3/1376d951485a275eb26bbc7a186a5bbbcf8a3ee7
 U
